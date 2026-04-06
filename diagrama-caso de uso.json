@@ -1,0 +1,132 @@
+{
+  "classes": [
+    {
+      "id": "cls_1775367407521",
+      "name": "Cajero",
+      "x": 24.0374698817173,
+      "y": 23.209587881498265,
+      "type": "class",
+      "attrs": [
+        "- id: String",
+        "- nombre: String",
+        "- turno: String"
+      ],
+      "methods": [
+        "+ registrarCliente(): void",
+        "+  abrirCuenta(): void",
+        "+ procesarDeposito(): void",
+        "+ procesarRetiro(): void"
+      ]
+    },
+    {
+      "id": "cls_1775367991000",
+      "name": "Cliente",
+      "x": 21.265788654704664,
+      "y": 380.77805068466694,
+      "type": "class",
+      "attrs": [
+        "- id: String",
+        "- nombre: String",
+        "- email: String",
+        "- estadoCuenta: String"
+      ],
+      "methods": [
+        "+ recibirNotificacion(): void"
+      ]
+    },
+    {
+      "id": "cls_1775368235207",
+      "name": "Asesorfinanciero",
+      "x": 258.31669108072913,
+      "y": 25.658325195312507,
+      "type": "class",
+      "attrs": [
+        "- id: String",
+        "- nombre: String",
+        "- especialidad: String"
+      ],
+      "methods": [
+        "+ realizarTransferencia(): void",
+        "+ consultarCliente(): void",
+        "+ gestionarEstado(): void",
+        "+ bloquearCuenta(): void"
+      ]
+    },
+    {
+      "id": "cls_1775368517353",
+      "name": "SistemaAuditor",
+      "x": 303.53553901284425,
+      "y": 405.20697124933787,
+      "type": "class",
+      "attrs": [
+        "- idSistema: String",
+        "- fechaRegistro: String"
+      ],
+      "methods": [
+        "+ consultarHistorial(): void",
+        "+ registrarEvento(): void"
+      ]
+    },
+    {
+      "id": "cls_1775368612082",
+      "name": "GerenteSucursal",
+      "x": 521.7250326405401,
+      "y": 24.54999840777853,
+      "type": "class",
+      "attrs": [
+        "- id: String",
+        "- nombre: String",
+        "- Sucursal: String"
+      ],
+      "methods": [
+        "+ Calcularnomina(): void",
+        "+ aprobarCredito(): void",
+        "+ registarEmpleado(): void"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "from": "cls_1775367407521",
+      "to": "cls_1775367991000",
+      "type": "herencia",
+      "multFrom": "",
+      "multTo": ""
+    },
+    {
+      "from": "cls_1775368235207",
+      "to": "cls_1775367991000",
+      "type": "herencia",
+      "multFrom": "",
+      "multTo": ""
+    },
+    {
+      "from": "cls_1775367407521",
+      "to": "cls_1775367991000",
+      "type": "asociacion",
+      "multFrom": "",
+      "multTo": ""
+    },
+    {
+      "from": "cls_1775368235207",
+      "to": "cls_1775367991000",
+      "type": "asociacion",
+      "multFrom": "",
+      "multTo": ""
+    },
+    {
+      "from": "cls_1775368235207",
+      "to": "cls_1775368517353",
+      "type": "dependencia",
+      "multFrom": "",
+      "multTo": ""
+    },
+    {
+      "from": "cls_1775368612082",
+      "to": "cls_1775368517353",
+      "type": "asociacion",
+      "multFrom": "",
+      "multTo": ""
+    }
+  ]
+}
